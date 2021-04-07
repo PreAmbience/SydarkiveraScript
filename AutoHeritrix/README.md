@@ -40,7 +40,7 @@ Sydarkivera uses a modified version of the script for more frequent automated cr
 The monthly variant of AutoHeritrix is meant to be scheduled using job scheduler software (like cron) and will not ask for any user input when run.
 Instead, all variables needed for the script to function are defined inside the script itself, requiring some editing before it will run.
 
-For example, you can schedule it using crontab: ```* * * *    /usr/bin/python3    /path/to/script/AutoHeritrixMonthly.py >> /path/to/logs/autoHeritrixLog.txt```
+For example, you can schedule it using crontab: ```* * * *    /usr/bin/python3    /path/to/script/AutoHeritrixMonthly.py -n -d /path/to/configAndUrlList/ >> /path/to/logs/autoHeritrixLog.txt```
 
 The script uses the same template and URL-list structure to input and output data. If you are running both the standard version and the monthly version, it is recommended to keep them seperated in different folders with their own templates and URL-lists.
 
